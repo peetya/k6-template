@@ -16,7 +16,7 @@ export const options = {
 
 export default function() {
     group('check home page', () => {
-        const res = http.get('https://google.com');
+        const res = http.get(__ENV.URL);
 
         sleep(1);
 

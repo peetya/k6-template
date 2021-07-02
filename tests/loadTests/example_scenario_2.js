@@ -12,7 +12,7 @@ export const example_scenario_2_options = {
 
 export const example_scenario_2_test = () => {
     group('check home page', () => {
-        const res = http.get('https://google.com');
+        const res = http.get(__ENV.URL);
 
         sleep(1);
 
