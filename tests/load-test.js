@@ -1,23 +1,9 @@
-import exampleScenario1 from './loadTests/example_scenario_1.js';
-import exampleScenario2 from './loadTests/example_scenario_2.js';
+import { example_scenario_1_options, example_scenario_1_test } from './loadTests/example_scenario_1.js';
+import { example_scenario_2_options, example_scenario_2_test } from './loadTests/example_scenario_2.js';
 
 const scenarios = {
-    example_scenario_1: {
-        exec: 'example_scenario_1',
-        executor: 'shared-iterations',
-        vus: 1,
-        iterations: 10,
-        maxDuration: '10m',
-        tags: { testType: 'api' },
-    },
-    example_scenario_2: {
-        exec: 'example_scenario_2',
-        executor: 'shared-iterations',
-        vus: 1,
-        iterations: 10,
-        maxDuration: '10m',
-        tags: { testType: 'api' },
-    },
+    example_scenario_1: example_scenario_1_options,
+    example_scenario_2: example_scenario_2_options,
 };
 
 if (__ENV.SCENARIOS) {
@@ -40,5 +26,5 @@ export const options = {
     scenarios,
 };
 
-export const example_scenario_1 = exampleScenario1;
-export const example_scenario_2 = exampleScenario2;
+export const example_scenario_1 = example_scenario_1_test;
+export const example_scenario_2 = example_scenario_2_test;
